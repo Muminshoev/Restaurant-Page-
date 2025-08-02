@@ -1,3 +1,3 @@
 import "./styles.css"
-
-console.log("hye")
+import "./homePage.js"
+import "./menuPage.js"
