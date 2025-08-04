@@ -1,14 +1,26 @@
-
+import menuImg from "./img/menu.png"
 
 
 
 function menuPage() {
-    const contentEl = document.getElementById("content");
-    const menuBtn = document.getElementById("menu");
+    const content = document.getElementById("content");
+    const containerEl = document.createElement("div");
+    containerEl.className = "container";
+        const menuImgEl = document.createElement("img");
+        menuImgEl.className = "menu__img";
+        menuImgEl.src = menuImg; 
+    containerEl.appendChild(menuImgEl);
+    content.appendChild(containerEl);
+}
 
-    menuBtn.addEventListener("click", () => {
-        contentEl.innerHTML = `<h1>This is menu page</h1>`
+function addMenuPage() {
+    const btn = document.getElementById("menu");
+    const content = document.getElementById("content");
+
+    btn.addEventListener("click", () => {
+        content.innerHTML = "";
+        menuPage()
     })
 };
 
-menuPage();
+addMenuPage();
